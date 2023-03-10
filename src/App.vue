@@ -18,7 +18,7 @@ export default defineComponent({
     const viewStyle = computed(() => {
       const bottom = playlist.value.length ? '60px' : 0;
 
-      return { paddingBottom: bottom };
+      return { bottom, paddingBottom: bottom };
     });
 
     return { viewStyle };

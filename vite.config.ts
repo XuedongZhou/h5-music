@@ -26,6 +26,7 @@ export default defineConfig({
       }
     }
   },
+  base: "/h5-music",
   build: {
     outDir: 'h5-music',
     rollupOptions: {

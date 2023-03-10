@@ -2,11 +2,8 @@
   <div v-loading="loading">
     <ul>
       <li class="item" v-for="item in list" :key="item.id">
-        <router-link
-          class="artist"
-          :to="{ name: 'hot-song', query: { id: item.id, avatar: item.img1v1Url } }"
-        >
-          <img class="avatar" v-lazy="item.img1v1Url" alt="" />
+        <router-link class="artist" :to="{ name: 'hot-song', query: { id: item.id, avatar: item.img1v1Url } }">
+          <img class="avatar" v-lazy="item.img1v1Url + '?imageView&thumbnail=80y80&quality=100&tostatic=0'" alt="" />
           <div class="name">
             {{ item.name }} <span>{{ item.alias?.length ? `（${item.alias[0]}）` : null }}</span>
           </div>
@@ -25,6 +22,7 @@ export default defineComponent({
   setup() {
     const list = ref<Artist[]>([]);
     const loading = ref(false);
+
     const getArtists = async () => {
       try {
         loading.value = true;

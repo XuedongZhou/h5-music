@@ -7,7 +7,7 @@
         :to="{ path: '/top-list', query: { id: item.id } }"
       >
         <div class="item">
-          <img width="100" height="100" :src="item.coverImgUrl" alt="" />
+          <img width="100" height="100" :src="item.coverImgUrl + '?imageView&thumbnail=300y300&quality=100&tostatic=0'" alt="" />
         </div>
       </router-link>
     </div>

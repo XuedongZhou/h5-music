@@ -16,7 +16,7 @@
           :to="'/playlist?id=' + item.id"
         >
           <div class="list-img">
-            <img class="img" v-lazy="item.coverImgUrl" />
+            <img class="img" v-lazy="item.coverImgUrl + '?imageView&thumbnail=300y300&quality=100&tostatic=0'" />
             <div class="count">
               <HIcon icon="icon-listing-content-fill"></HIcon>
               <span>

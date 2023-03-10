@@ -1,10 +1,19 @@
-import { h, mergeProps, renderSlot, withCtx, ref, computed, watch, nextTick } from 'vue';
+import {
+  h,
+  mergeProps,
+  renderSlot,
+  withCtx,
+  ref,
+  computed,
+  watch,
+  nextTick,
+  defineComponent
+} from 'vue';
 import type { BScroll } from '@better-scroll/core/dist/types/BScroll';
 import { usePlayerStore } from '@/stores/player';
 import HScroll from '../scroll/HScroll.vue';
 
-export default {
-  name: 'wrap-scroll',
+export default defineComponent({
   props: HScroll.props,
   emits: HScroll.emits,
   render(ctx: any) {
@@ -46,4 +55,4 @@ export default {
 
     return { scrollRef, scroll };
   }
-};
+});
