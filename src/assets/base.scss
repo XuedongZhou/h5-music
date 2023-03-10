@@ -1,0 +1,105 @@
+/* semantic color variables for this project */
+:root {
+  --color-text: #333;
+  --color-text-dark: #fefefe;
+  --color-text-second-dark: #cecece;
+  --color-text-second: #888;
+  --color-text-3: #bbb;
+  --color-background: #fff;
+  --color-background-second: #edecec;
+  --color-border: rgba(0, 0, 0, 0.05);
+  --color-primary: #d43c33;
+  --color-link: #507daf;
+  --color-award: #fa541c;
+  --color-background-award: #fff2e8;
+
+  --color-dialog-background: #fff;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-text: #fff;
+    --color-background: #333;
+    --color-background-second: rgba(0, 0, 0, 0.2);
+    --color-border: rgba(255, 255, 255, 0.1);
+  }
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  color: var(--color-text);
+  background: var(--color-background);
+  font-family: Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu,
+    Cantarell, 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  font-size: 0.875rem;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  margin: 0;
+}
+
+a {
+  color: var(--color-text);
+  text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+  li {
+    list-style: none;
+  }
+}
+
+figure {
+  margin: 0;
+}
+
+.h-reactive {
+  position: relative;
+}
+
+.slide-enter-active,
+.slide-leave-active {
+  transition: all 0.3s;
+}
+
+.slide-enter-from,
+.slide-leave-to {
+  transform: translate3d(100%, 0, 0);
+}
+
+.list-enter-active,
+.list-leave-active {
+  transition: all 0.3s;
+}
+
+.list-enter-from,
+.list-leave-to {
+  height: 0 !important;
+}
+
+@keyframes circling {
+  0% {
+    transform: rotate(0);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}

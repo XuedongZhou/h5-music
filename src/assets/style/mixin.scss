@@ -1,0 +1,19 @@
+// 禁止折行
+@mixin no-wrap() {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+// 扩展小图标按钮的点击区域
+@mixin extend-click() {
+  position: relative;
+  &:before {
+    content: '';
+    position: absolute;
+    top: -0.625rem;
+    left: -0.625rem;
+    right: -0.625rem;
+    bottom: -0.625rem;
+  }
+}
